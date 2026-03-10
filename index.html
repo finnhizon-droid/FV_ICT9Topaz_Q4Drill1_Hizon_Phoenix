@@ -6,6 +6,32 @@
     <title>Q4 Drill 1</title>
 </head>
 <body>
-    
+    <h1>Constructions</h1>
+
+    <input type="text" class="form-control" id="Age" placeholder="type here...">
+    <button class="btn btn-info" onclick="checkAge()">Check</button>
+
+    <script>
+        function checkAge(){
+        var kwh = document.getElementById("Age").value;
+        let cat1 = "Lifeline Consumer";
+
+            if (isNaN(kwh)) || (kwh < 0){
+                alert("Please input a valid number.");
+            }
+
+            else if(kwh <= 18){
+                alert("You are underage.");
+            }
+
+            else if(kwh>18){
+                alert("You are of legal age.");
+            }
+                
+            else{
+                alert("Age could not be determined.");
+            }
+        }
+    </script>
 </body>
 </html>
