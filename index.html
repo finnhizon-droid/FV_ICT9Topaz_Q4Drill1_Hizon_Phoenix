@@ -6,31 +6,81 @@
     <title>Q4 Drill 1</title>
 </head>
 <body>
-    <h1>Constructions</h1>
+    <div>
+    <h1>Electricity Consumption Classifier</h1>
 
     <input type="text" class="form-control" id="Age" placeholder="type here...">
     <button class="btn btn-info" onclick="checkAge()">Check</button>
+    </div>
 
     <script>
         function checkAge(){
         var kwh = document.getElementById("Age").value;
         let cat1 = "Lifeline Consumer";
-
-            if (isNaN(kwh)) || (kwh < 0){
+            if (isNaN(kwh) || kwh < 0) {
                 alert("Please input a valid number.");
             }
 
-            else if(kwh <= 18){
-                alert("You are underage.");
+            else if(kwh <= 100){
+                alert(cat1 + ": You have a discounted rate.");
             }
 
-            else if(kwh>18){
-                alert("You are of legal age.");
+            else if(kwh >= 0){
+                alert(cat1 + ": You have a discounted rate.");
+            }
+
+        let cat2 = "Low Consumption";
+            if (isNaN(kwh) || kwh < 0) {
+                alert("Please input a valid number.");
+            }
+
+            else if(kwh <= 200){
+                alert(cat2 + ": You have normal residential rates");
+            }
+
+            else if(kwh >= 101){
+                alert(cat2 + ": You have normal residential rates");
+            }
+
+        let cat3 = "Average Consumption";
+            if (isNaN(kwh) || kwh < 0) {
+                alert("Please input a valid number.");
+            }
+
+            else if(kwh <= 300){
+                alert(cat3 + ": You have typical electricity usage.");
+            }
+
+            else if(kwh >= 201){
+                alert(cat3 + ": You have typical electricity usage.");
             }
                 
-            else{
-                alert("Age could not be determined.");
+        let cat4 = "High Consumption";
+            if (isNaN(kwh) || kwh < 0) {
+                alert("Please input a valid number.");
             }
+
+            else if(kwh <= 400){
+                alert(cat4 + ": You have higher electricity usage.");
+            }
+
+            else if(kwh >= 301){
+                alert(cat4 + ": You have higher electricity usage.");
+            }
+                
+        let cat5 = "Very High Consumption";
+            if (isNaN(kwh) || kwh < 0) {
+                alert("Please input a valid number.");
+            }
+
+            else if(kwh <= 500){
+                alert(cat5 + ": You have heavy electricity usage.");
+            }
+
+            else if(kwh >= 401){
+                alert(cat5 + ": You have heavy electricity usage.");
+            }
+                
         }
     </script>
 </body>
